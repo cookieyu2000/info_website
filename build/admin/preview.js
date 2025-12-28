@@ -1,5 +1,40 @@
 /* global CMS, createClass, h */
 (function () {
+  var isLocalHost =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1";
+  var autoPublishTimer = null;
+
+  function scheduleAutoPublish(entry) {
+    if (!isLocalHost) return;
+
+    if (autoPublishTimer) {
+      clearTimeout(autoPublishTimer);
+    }
+
+    autoPublishTimer = setTimeout(function () {
+      var payload = {
+        collection: entry && entry.getIn(["collection"]),
+        slug: entry && entry.getIn(["slug"]),
+      };
+
+      fetch("http://localhost:8090/publish", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch(function () {});
+    }, 1200);
+  }
+
+  if (typeof CMS !== "undefined" && CMS.registerEventListener) {
+    CMS.registerEventListener({
+      name: "postSave",
+      handler: function ({ entry }) {
+        scheduleAutoPublish(entry);
+      },
+    });
+  }
+
   function buildPreviewUrl(lang) {
     var params = new URLSearchParams({ cmsPreview: "1", lang: lang });
     return "/?" + params.toString();
