@@ -6,8 +6,8 @@ backend:
   auth_scope: public_repo
   app_id: "0v23limmJxofkHQsf21E"
 
-site_url: "https://cookieyu2000.github.io/info_website"
-display_url: "https://cookieyu2000.github.io/info_website"
+site_url: "https://cookieyu2000.github.io/info_website/"
+display_url: "https://cookieyu2000.github.io/info_website/"
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
