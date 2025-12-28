@@ -1,17 +1,36 @@
 {
   "nav": {
-    "brandName": "Ping-Yen Yu",
+    "brandName": "Ping-Yen ",
     "brandTagline": "個人介紹網站",
     "languageLabel": "語言切換",
     "ariaLabel": "主要導覽",
     "toggleLabel": "切換導覽",
     "items": [
-      { "label": "首頁", "href": "#home" },
-      { "label": "學歷", "href": "#education" },
-      { "label": "工作經驗", "href": "#experience" },
-      { "label": "個人介紹", "href": "#about" },
-      { "label": "作品介紹", "href": "#works" },
-      { "label": "聯絡我", "href": "#contact", "cta": true }
+      {
+        "label": "首頁",
+        "href": "#home"
+      },
+      {
+        "label": "學歷",
+        "href": "#education"
+      },
+      {
+        "label": "工作經驗",
+        "href": "#experience"
+      },
+      {
+        "label": "個人介紹",
+        "href": "#about"
+      },
+      {
+        "label": "作品介紹",
+        "href": "#works"
+      },
+      {
+        "label": "聯絡我",
+        "href": "#contact",
+        "cta": true
+      }
     ]
   },
   "hero": {
@@ -31,7 +50,13 @@
       "location": "台北",
       "name": "余秉諺",
       "title": "AI-Software Engineer",
-      "tags": ["LLM 應用", "RAG 檢索", "可解釋 AI", "全端整合", "模型部署"]
+      "tags": [
+        "LLM 應用",
+        "RAG 檢索",
+        "可解釋 AI",
+        "全端整合",
+        "模型部署"
+      ]
     },
     "floating": "AI-Software Engineer",
     "imageAlt": "Profile"
@@ -44,8 +69,14 @@
         "year": "2023 - 2025",
         "school": "國立暨南國際大學・資訊工程學系",
         "logos": [
-          { "src": "/70_70.gif", "alt": "National Chi Nan University emblem" },
-          { "src": "/logo2.png", "alt": "National Chi Nan University logo" }
+          {
+            "src": "/70_70.gif",
+            "alt": "National Chi Nan University emblem"
+          },
+          {
+            "src": "/logo2.png",
+            "alt": "National Chi Nan University logo"
+          }
         ],
         "degree": "碩士",
         "degree_En": "Master's",
@@ -63,10 +94,18 @@
         "year": "2019 - 2023",
         "school": "實踐大學・資訊科技與通訊學系",
         "school_En": "Shih Chien University・Department of Information Technology and Communications",
-        "logos": [{ "src": "/903635956.png", "alt": "Shih Chien University logo" }],
+        "logos": [
+          {
+            "src": "/903635956.png",
+            "alt": "Shih Chien University logo"
+          }
+        ],
         "degree": "學士",
         "degree_En": "Bachelor's",
-        "tags": ["網頁設計", "無人機實作"]
+        "tags": [
+          "網頁設計",
+          "無人機實作"
+        ]
       }
     ]
   },
@@ -79,7 +118,12 @@
         "company": "資訊工業策進會",
         "role": "實習工程師",
         "description": "網頁平台開發",
-        "tags": ["React", "JavaScript", "MongoDB", "Node.js"]
+        "tags": [
+          "React",
+          "JavaScript",
+          "MongoDB",
+          "Node.js"
+        ]
       }
     ]
   },
@@ -129,7 +173,11 @@
         "type": "競賽",
         "title": "AICUP教育部全國大專校院人工智慧競賽",
         "description": "​圍棋棋力模仿與棋風辨識競賽 - 銀牌。",
-        "tags": ["DL", "AlphaGo", "CNN"],
+        "tags": [
+          "DL",
+          "AlphaGo",
+          "CNN"
+        ],
         "image": "/aicup.JPG",
         "link": "https://www.aicup.tw/post/%E3%80%90%E5%BE%97%E7%8D%8E%E5%90%8D%E5%96%AE%E3%80%91ai-cup-2023-%E7%A7%8B%E5%AD%A3%E8%B3%BD-%E3%80%8C%E5%9C%8D%E6%A3%8B%E6%A3%8B%E5%8A%9B%E6%A8%A1%E4%BB%BF%E8%88%87%E6%A3%8B%E9%A2%A8%E8%BE%A8%E8%AD%98%E3%80%8D%E7%AB%B6%E8%B3%BD"
       },
@@ -138,7 +186,13 @@
         "type": "碩士研究",
         "title": "基因變異預測平台",
         "description": "利用 Explainable AI 與 NLP，開發基因變異致病性預測平台。",
-        "tags": ["NLP", "Flask", "DL", "Transformer", "BERT"],
+        "tags": [
+          "NLP",
+          "Flask",
+          "DL",
+          "Transformer",
+          "BERT"
+        ],
         "image": "/biobert.png",
         "link": "https://aiia.csie.ncnu.edu.tw:9999/"
       },
@@ -147,7 +201,11 @@
         "type": "作品",
         "title": "個人形象網站",
         "description": "利用 React 建立個人形象網站。",
-        "tags": ["React", "JavaScript", "UI/UX Design"],
+        "tags": [
+          "React",
+          "JavaScript",
+          "UI/UX Design"
+        ],
         "image": "/web.png",
         "link": "https://cookieyu2000.github.io/info_website/"
       }

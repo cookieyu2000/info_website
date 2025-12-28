@@ -6,6 +6,9 @@
   }
 
   var PreviewFrame = createClass({
+    setFrameRef: function (element) {
+      this.previewFrame = element;
+    },
     componentDidMount: function () {
       this.postPreviewData();
     },
@@ -13,7 +16,7 @@
       this.postPreviewData();
     },
     postPreviewData: function () {
-      var frame = this.refs.previewFrame;
+      var frame = this.previewFrame;
       if (!frame || !frame.contentWindow) return;
 
       var entry = this.props.entry;
@@ -28,7 +31,7 @@
     },
     render: function () {
       return h("iframe", {
-        ref: "previewFrame",
+        ref: this.setFrameRef,
         src: buildPreviewUrl(this.props.lang),
         style: {
           width: "100%",

@@ -7,8 +7,8 @@ backend:
 
 locale: "zh_Hant"
 publish_mode: editorial_workflow
-media_folder: "public/uploads"
-public_folder: "/uploads"
+media_folder: "public"
+public_folder: "/"
 site_url: https://cookieyu2000.github.io/info_website/
 local_backend: true
 
