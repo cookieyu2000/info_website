@@ -4,11 +4,14 @@ backend:
   branch: main
   auth_type: pkce
   app_id: "0v23lithpy9aJDk1zwB5"
+  base_url: https://auth.decapcms.org
+  auth_endpoint: auth
 
 locale: "zh_Hant"
 publish_mode: editorial_workflow
 media_folder: "public/uploads"
 public_folder: "/uploads"
+site_url: https://cookieyu2000.github.io/info_website/
 
 collections:
   - name: "site"
