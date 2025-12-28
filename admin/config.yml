@@ -4,7 +4,7 @@ backend:
   branch: main
   auth_type: pkce
   auth_scope: public_repo
-  app_id: "REPLACE_WITH_GITHUB_OAUTH_APP_CLIENT_ID"
+  app_id: "Ov23li8FExuUCWKcFSoM"
 
 site_url: "https://cookieyu2000.github.io/info_website"
 display_url: "https://cookieyu2000.github.io/info_website"
@@ -29,8 +29,16 @@ collections:
             widget: "object"
             fields:
               - { label: "Brand Name", name: "brandName", widget: "string" }
-              - { label: "Brand Tagline", name: "brandTagline", widget: "string" }
-              - { label: "Language Label", name: "languageLabel", widget: "string" }
+              - {
+                  label: "Brand Tagline",
+                  name: "brandTagline",
+                  widget: "string",
+                }
+              - {
+                  label: "Language Label",
+                  name: "languageLabel",
+                  widget: "string",
+                }
               - { label: "ARIA Label", name: "ariaLabel", widget: "string" }
               - { label: "Toggle Label", name: "toggleLabel", widget: "string" }
               - label: "Items"
@@ -40,7 +48,13 @@ collections:
                 fields:
                   - { label: "Label", name: "label", widget: "string" }
                   - { label: "Href", name: "href", widget: "string" }
-                  - { label: "CTA", name: "cta", widget: "boolean", required: false, default: false }
+                  - {
+                      label: "CTA",
+                      name: "cta",
+                      widget: "boolean",
+                      required: false,
+                      default: false,
+                    }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -87,7 +101,12 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Items"
                 name: "items"
                 widget: "list"
@@ -95,11 +114,36 @@ collections:
                 fields:
                   - { label: "Year", name: "year", widget: "string" }
                   - { label: "School", name: "school", widget: "string" }
-                  - { label: "School (EN)", name: "school_En", widget: "string", required: false }
-                  - { label: "Degree", name: "degree", widget: "string", required: false }
-                  - { label: "Degree (EN)", name: "degree_En", widget: "string", required: false }
-                  - { label: "Description", name: "description", widget: "text", required: false }
-                  - { label: "Description (EN)", name: "description_En", widget: "text", required: false }
+                  - {
+                      label: "School (EN)",
+                      name: "school_En",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Degree",
+                      name: "degree",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Degree (EN)",
+                      name: "degree_En",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                      required: false,
+                    }
+                  - {
+                      label: "Description (EN)",
+                      name: "description_En",
+                      widget: "text",
+                      required: false,
+                    }
                   - label: "Logos"
                     name: "logos"
                     widget: "list"
@@ -117,7 +161,12 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Items"
                 name: "items"
                 widget: "list"
@@ -125,11 +174,36 @@ collections:
                 fields:
                   - { label: "Period", name: "period", widget: "string" }
                   - { label: "Company", name: "company", widget: "string" }
-                  - { label: "Company (EN)", name: "company_En", widget: "string", required: false }
-                  - { label: "Role", name: "role", widget: "string", required: false }
-                  - { label: "Role (EN)", name: "role_En", widget: "string", required: false }
-                  - { label: "Description", name: "description", widget: "text", required: false }
-                  - { label: "Description (EN)", name: "description_En", widget: "text", required: false }
+                  - {
+                      label: "Company (EN)",
+                      name: "company_En",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Role",
+                      name: "role",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Role (EN)",
+                      name: "role_En",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                      required: false,
+                    }
+                  - {
+                      label: "Description (EN)",
+                      name: "description_En",
+                      widget: "text",
+                      required: false,
+                    }
                   - label: "Tags"
                     name: "tags"
                     widget: "list"
@@ -140,7 +214,12 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - { label: "Intro Title", name: "introTitle", widget: "string" }
               - label: "Intro Paragraphs"
                 name: "introParagraphs"
@@ -161,7 +240,12 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Items"
                 name: "items"
                 widget: "list"
@@ -170,22 +254,46 @@ collections:
                   - { label: "Year", name: "year", widget: "string" }
                   - { label: "Type", name: "type", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
                   - label: "Tags"
                     name: "tags"
                     widget: "list"
                     field: { label: "Tag", name: "tag", widget: "string" }
-                  - { label: "Image", name: "image", widget: "string", required: false }
-                  - { label: "Link", name: "link", widget: "string", required: false }
+                  - {
+                      label: "Image",
+                      name: "image",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Link",
+                      name: "link",
+                      widget: "string",
+                      required: false,
+                    }
           - label: "Contact"
             name: "contact"
             widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - { label: "Quick Title", name: "quickTitle", widget: "string" }
-              - { label: "Quick Description", name: "quickDescription", widget: "text", required: false }
+              - {
+                  label: "Quick Description",
+                  name: "quickDescription",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Labels"
                 name: "labels"
                 widget: "object"
@@ -234,8 +342,16 @@ collections:
             widget: "object"
             fields:
               - { label: "Brand Name", name: "brandName", widget: "string" }
-              - { label: "Brand Tagline", name: "brandTagline", widget: "string" }
-              - { label: "Language Label", name: "languageLabel", widget: "string" }
+              - {
+                  label: "Brand Tagline",
+                  name: "brandTagline",
+                  widget: "string",
+                }
+              - {
+                  label: "Language Label",
+                  name: "languageLabel",
+                  widget: "string",
+                }
               - { label: "ARIA Label", name: "ariaLabel", widget: "string" }
               - { label: "Toggle Label", name: "toggleLabel", widget: "string" }
               - label: "Items"
@@ -245,7 +361,13 @@ collections:
                 fields:
                   - { label: "Label", name: "label", widget: "string" }
                   - { label: "Href", name: "href", widget: "string" }
-                  - { label: "CTA", name: "cta", widget: "boolean", required: false, default: false }
+                  - {
+                      label: "CTA",
+                      name: "cta",
+                      widget: "boolean",
+                      required: false,
+                      default: false,
+                    }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -292,7 +414,12 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Items"
                 name: "items"
                 widget: "list"
@@ -300,11 +427,36 @@ collections:
                 fields:
                   - { label: "Year", name: "year", widget: "string" }
                   - { label: "School", name: "school", widget: "string" }
-                  - { label: "School (EN)", name: "school_En", widget: "string", required: false }
-                  - { label: "Degree", name: "degree", widget: "string", required: false }
-                  - { label: "Degree (EN)", name: "degree_En", widget: "string", required: false }
-                  - { label: "Description", name: "description", widget: "text", required: false }
-                  - { label: "Description (EN)", name: "description_En", widget: "text", required: false }
+                  - {
+                      label: "School (EN)",
+                      name: "school_En",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Degree",
+                      name: "degree",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Degree (EN)",
+                      name: "degree_En",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                      required: false,
+                    }
+                  - {
+                      label: "Description (EN)",
+                      name: "description_En",
+                      widget: "text",
+                      required: false,
+                    }
                   - label: "Logos"
                     name: "logos"
                     widget: "list"
@@ -322,7 +474,12 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Items"
                 name: "items"
                 widget: "list"
@@ -330,11 +487,36 @@ collections:
                 fields:
                   - { label: "Period", name: "period", widget: "string" }
                   - { label: "Company", name: "company", widget: "string" }
-                  - { label: "Company (EN)", name: "company_En", widget: "string", required: false }
-                  - { label: "Role", name: "role", widget: "string", required: false }
-                  - { label: "Role (EN)", name: "role_En", widget: "string", required: false }
-                  - { label: "Description", name: "description", widget: "text", required: false }
-                  - { label: "Description (EN)", name: "description_En", widget: "text", required: false }
+                  - {
+                      label: "Company (EN)",
+                      name: "company_En",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Role",
+                      name: "role",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Role (EN)",
+                      name: "role_En",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                      required: false,
+                    }
+                  - {
+                      label: "Description (EN)",
+                      name: "description_En",
+                      widget: "text",
+                      required: false,
+                    }
                   - label: "Tags"
                     name: "tags"
                     widget: "list"
@@ -345,7 +527,12 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - { label: "Intro Title", name: "introTitle", widget: "string" }
               - label: "Intro Paragraphs"
                 name: "introParagraphs"
@@ -366,7 +553,12 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Items"
                 name: "items"
                 widget: "list"
@@ -375,22 +567,46 @@ collections:
                   - { label: "Year", name: "year", widget: "string" }
                   - { label: "Type", name: "type", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
+                  - {
+                      label: "Description",
+                      name: "description",
+                      widget: "text",
+                    }
                   - label: "Tags"
                     name: "tags"
                     widget: "list"
                     field: { label: "Tag", name: "tag", widget: "string" }
-                  - { label: "Image", name: "image", widget: "string", required: false }
-                  - { label: "Link", name: "link", widget: "string", required: false }
+                  - {
+                      label: "Image",
+                      name: "image",
+                      widget: "string",
+                      required: false,
+                    }
+                  - {
+                      label: "Link",
+                      name: "link",
+                      widget: "string",
+                      required: false,
+                    }
           - label: "Contact"
             name: "contact"
             widget: "object"
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text", required: false }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
               - { label: "Quick Title", name: "quickTitle", widget: "string" }
-              - { label: "Quick Description", name: "quickDescription", widget: "text", required: false }
+              - {
+                  label: "Quick Description",
+                  name: "quickDescription",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Labels"
                 name: "labels"
                 widget: "object"
