@@ -36,9 +36,9 @@
   "hero": {
     "eyebrow": "AI-Software Engineer",
     "headline": {
-      "prefix": "嗨，我是",
-      "name": "余秉諺",
-      "connector": "，"
+      "prefix": "余秉諺",
+      "name": "Ping-Yen",
+      "connector": " Yu"
     },
     "lead": "具備機器學習與深度學習背景，專長於 LLM、NLP 與可解釋式 AI",
     "ctas": {
