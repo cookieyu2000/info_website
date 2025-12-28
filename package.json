@@ -18,6 +18,7 @@
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "auto-publish": "node scripts/auto-publish-server.js",
     "publish": "bash scripts/publish.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
