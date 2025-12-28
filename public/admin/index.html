@@ -27,11 +27,12 @@
 
         var cmsScript = document.createElement("script");
         cmsScript.src = "https://unpkg.com/decap-cms@latest/dist/decap-cms.js";
+        cmsScript.onload = function () {
+          var previewScript = document.createElement("script");
+          previewScript.src = "preview.js";
+          document.body.appendChild(previewScript);
+        };
         document.body.appendChild(cmsScript);
-
-        var previewScript = document.createElement("script");
-        previewScript.src = "preview.js";
-        document.body.appendChild(previewScript);
       })();
     </script>
   </body>
