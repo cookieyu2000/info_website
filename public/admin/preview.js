@@ -314,4 +314,5 @@
   });
 
   CMS.registerPreviewTemplate("zh", SitePreview);
+  CMS.registerPreviewTemplate("en", SitePreview);
 })();

@@ -1,0 +1,409 @@
+backend:
+  name: github
+  repo: cookieyu2000/info_website
+  branch: main
+  auth_type: pkce
+  app_id: "REPLACE_WITH_GITHUB_OAUTH_APP_CLIENT_ID"
+
+locale: "zh_Hant"
+publish_mode: editorial_workflow
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site"
+    label: "網站內容"
+    files:
+      - name: "zh"
+        label: "中文內容"
+        file: "src/content/zh.json"
+        format: "json"
+        editor:
+          preview: true
+        preview_path: "/"
+        fields:
+          - label: "導覽列"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "品牌名稱", name: "brandName", widget: "string" }
+              - { label: "品牌標語", name: "brandTagline", widget: "string" }
+              - { label: "語言切換標籤", name: "languageLabel", widget: "string" }
+              - { label: "導覽說明", name: "ariaLabel", widget: "string" }
+              - { label: "導覽切換標籤", name: "toggleLabel", widget: "string" }
+              - label: "導覽項目"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "標題", name: "label", widget: "string" }
+                  - { label: "連結", name: "href", widget: "string" }
+                  - { label: "主要按鈕", name: "cta", widget: "boolean", required: false }
+          - label: "主視覺"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - label: "標題"
+                name: "headline"
+                widget: "object"
+                fields:
+                  - { label: "前綴", name: "prefix", widget: "string" }
+                  - { label: "姓名", name: "name", widget: "string" }
+                  - { label: "連接字元", name: "connector", widget: "string" }
+              - { label: "簡介", name: "lead", widget: "text" }
+              - label: "行動按鈕"
+                name: "ctas"
+                widget: "object"
+                fields:
+                  - { label: "主要按鈕", name: "primary", widget: "string" }
+                  - { label: "次要按鈕", name: "secondary", widget: "string" }
+              - label: "卡片資訊"
+                name: "card"
+                widget: "object"
+                fields:
+                  - { label: "狀態", name: "status", widget: "string" }
+                  - { label: "地點", name: "location", widget: "string" }
+                  - { label: "姓名", name: "name", widget: "string" }
+                  - { label: "職稱", name: "title", widget: "string" }
+                  - label: "標籤"
+                    name: "tags"
+                    widget: "list"
+                    field: { label: "標籤", name: "tag", widget: "string" }
+              - { label: "漂浮文字", name: "floating", widget: "string" }
+              - { label: "圖片替代文字", name: "imageAlt", widget: "string" }
+              - label: "統計數據"
+                name: "stats"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "數值", name: "value", widget: "string" }
+                  - { label: "標籤", name: "label", widget: "string" }
+          - label: "學歷"
+            name: "education"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - label: "內容"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "年份", name: "year", widget: "string" }
+                  - { label: "學校", name: "school", widget: "string" }
+                  - { label: "學校英文", name: "school_En", widget: "string", required: false }
+                  - label: "學校標誌"
+                    name: "logos"
+                    widget: "list"
+                    fields:
+                      - { label: "圖片", name: "src", widget: "image" }
+                      - { label: "替代文字", name: "alt", widget: "string" }
+                  - { label: "學位", name: "degree", widget: "string" }
+                  - { label: "學位英文", name: "degree_En", widget: "string", required: false }
+                  - { label: "描述", name: "description", widget: "text", required: false }
+                  - label: "標籤"
+                    name: "tags"
+                    widget: "list"
+                    field: { label: "標籤", name: "tag", widget: "string" }
+          - label: "工作經驗"
+            name: "experience"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - label: "內容"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "期間", name: "period", widget: "string" }
+                  - { label: "公司", name: "company", widget: "string" }
+                  - { label: "職稱", name: "role", widget: "string" }
+                  - { label: "描述", name: "description", widget: "text", required: false }
+                  - label: "標籤"
+                    name: "tags"
+                    widget: "list"
+                    field: { label: "標籤", name: "tag", widget: "string" }
+          - label: "個人介紹"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - { label: "描述", name: "description", widget: "text", required: false }
+              - { label: "自我簡介標題", name: "introTitle", widget: "string" }
+              - label: "自我簡介段落"
+                name: "introParagraphs"
+                widget: "list"
+                field: { label: "段落", name: "paragraph", widget: "text" }
+              - label: "重點能力"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - { label: "標題", name: "title", widget: "string" }
+                  - label: "內容"
+                    name: "items"
+                    widget: "list"
+                    field: { label: "段落", name: "item", widget: "text" }
+          - label: "作品"
+            name: "works"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - label: "內容"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "年份", name: "year", widget: "string" }
+                  - { label: "類型", name: "type", widget: "string" }
+                  - { label: "標題", name: "title", widget: "string" }
+                  - { label: "描述", name: "description", widget: "text", required: false }
+                  - label: "標籤"
+                    name: "tags"
+                    widget: "list"
+                    field: { label: "標籤", name: "tag", widget: "string" }
+                  - { label: "圖片", name: "image", widget: "image", required: false }
+                  - { label: "連結", name: "link", widget: "string", required: false }
+          - label: "聯絡我"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - { label: "快速聯繫標題", name: "quickTitle", widget: "string" }
+              - label: "標籤名稱"
+                name: "labels"
+                widget: "object"
+                fields:
+                  - { label: "Email", name: "email", widget: "string" }
+                  - { label: "GitHub", name: "github", widget: "string" }
+                  - { label: "LinkedIn", name: "linkedin", widget: "string" }
+                  - { label: "電話", name: "phone", widget: "string" }
+              - label: "表單"
+                name: "form"
+                widget: "object"
+                fields:
+                  - label: "欄位名稱"
+                    name: "labels"
+                    widget: "object"
+                    fields:
+                      - { label: "姓名", name: "name", widget: "string" }
+                      - { label: "Email", name: "email", widget: "string" }
+                      - { label: "內容", name: "message", widget: "string" }
+                  - label: "提示文字"
+                    name: "placeholders"
+                    widget: "object"
+                    fields:
+                      - { label: "姓名", name: "name", widget: "string" }
+                      - { label: "Email", name: "email", widget: "string" }
+                      - { label: "內容", name: "message", widget: "string" }
+                  - { label: "送出文字", name: "submit", widget: "string" }
+                  - { label: "備註", name: "note", widget: "text", required: false }
+                  - { label: "空值顯示", name: "empty", widget: "string" }
+                  - { label: "分隔符號", name: "separator", widget: "string" }
+                  - { label: "信件標題", name: "subject", widget: "string" }
+                  - { label: "訪客稱呼", name: "visitor", widget: "string" }
+          - label: "頁尾"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "版權文字", name: "copyright", widget: "string" }
+              - { label: "回到頂端", name: "backToTop", widget: "string" }
+      - name: "en"
+        label: "英文內容"
+        file: "src/content/en.json"
+        format: "json"
+        editor:
+          preview: true
+        preview_path: "/"
+        fields:
+          - label: "導覽列"
+            name: "nav"
+            widget: "object"
+            fields:
+              - { label: "品牌名稱", name: "brandName", widget: "string" }
+              - { label: "品牌標語", name: "brandTagline", widget: "string" }
+              - { label: "語言切換標籤", name: "languageLabel", widget: "string" }
+              - { label: "導覽說明", name: "ariaLabel", widget: "string" }
+              - { label: "導覽切換標籤", name: "toggleLabel", widget: "string" }
+              - label: "導覽項目"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "標題", name: "label", widget: "string" }
+                  - { label: "連結", name: "href", widget: "string" }
+                  - { label: "主要按鈕", name: "cta", widget: "boolean", required: false }
+          - label: "主視覺"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - label: "標題"
+                name: "headline"
+                widget: "object"
+                fields:
+                  - { label: "前綴", name: "prefix", widget: "string" }
+                  - { label: "姓名", name: "name", widget: "string" }
+                  - { label: "連接字元", name: "connector", widget: "string" }
+              - { label: "簡介", name: "lead", widget: "text" }
+              - label: "行動按鈕"
+                name: "ctas"
+                widget: "object"
+                fields:
+                  - { label: "主要按鈕", name: "primary", widget: "string" }
+                  - { label: "次要按鈕", name: "secondary", widget: "string" }
+              - label: "統計數據"
+                name: "stats"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "數值", name: "value", widget: "string" }
+                  - { label: "標籤", name: "label", widget: "string" }
+              - label: "卡片資訊"
+                name: "card"
+                widget: "object"
+                fields:
+                  - { label: "狀態", name: "status", widget: "string" }
+                  - { label: "地點", name: "location", widget: "string" }
+                  - { label: "姓名", name: "name", widget: "string" }
+                  - { label: "職稱", name: "title", widget: "string" }
+                  - label: "標籤"
+                    name: "tags"
+                    widget: "list"
+                    field: { label: "標籤", name: "tag", widget: "string" }
+              - { label: "漂浮文字", name: "floating", widget: "string" }
+              - { label: "圖片替代文字", name: "imageAlt", widget: "string" }
+          - label: "學歷"
+            name: "education"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - label: "內容"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "年份", name: "year", widget: "string" }
+                  - { label: "學校", name: "school", widget: "string" }
+                  - { label: "學校英文", name: "school_En", widget: "string", required: false }
+                  - label: "學校標誌"
+                    name: "logos"
+                    widget: "list"
+                    fields:
+                      - { label: "圖片", name: "src", widget: "image" }
+                      - { label: "替代文字", name: "alt", widget: "string" }
+                  - { label: "學位", name: "degree", widget: "string" }
+                  - { label: "學位英文", name: "degree_En", widget: "string", required: false }
+                  - { label: "描述", name: "description", widget: "text", required: false }
+                  - { label: "描述英文", name: "description_En", widget: "text", required: false }
+                  - label: "標籤"
+                    name: "tags"
+                    widget: "list"
+                    field: { label: "標籤", name: "tag", widget: "string" }
+          - label: "工作經驗"
+            name: "experience"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - { label: "描述", name: "description", widget: "text", required: false }
+              - label: "內容"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "期間", name: "period", widget: "string" }
+                  - { label: "公司", name: "company", widget: "string", required: false }
+                  - { label: "公司英文", name: "company_En", widget: "string", required: false }
+                  - { label: "職稱", name: "role", widget: "string", required: false }
+                  - { label: "職稱英文", name: "role_En", widget: "string", required: false }
+                  - { label: "描述", name: "description", widget: "text", required: false }
+                  - { label: "描述英文", name: "description_En", widget: "text", required: false }
+                  - label: "標籤"
+                    name: "tags"
+                    widget: "list"
+                    field: { label: "標籤", name: "tag", widget: "string" }
+          - label: "個人介紹"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - { label: "描述", name: "description", widget: "text", required: false }
+              - { label: "自我簡介標題", name: "introTitle", widget: "string" }
+              - label: "自我簡介段落"
+                name: "introParagraphs"
+                widget: "list"
+                field: { label: "段落", name: "paragraph", widget: "text" }
+              - label: "重點能力"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - { label: "標題", name: "title", widget: "string" }
+                  - label: "內容"
+                    name: "items"
+                    widget: "list"
+                    field: { label: "段落", name: "item", widget: "text" }
+          - label: "作品"
+            name: "works"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - label: "內容"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "年份", name: "year", widget: "string" }
+                  - { label: "類型", name: "type", widget: "string" }
+                  - { label: "標題", name: "title", widget: "string" }
+                  - { label: "描述", name: "description", widget: "text", required: false }
+                  - label: "標籤"
+                    name: "tags"
+                    widget: "list"
+                    field: { label: "標籤", name: "tag", widget: "string" }
+                  - { label: "圖片", name: "image", widget: "image", required: false }
+                  - { label: "連結", name: "link", widget: "string", required: false }
+          - label: "聯絡我"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "小標", name: "eyebrow", widget: "string" }
+              - { label: "標題", name: "title", widget: "string" }
+              - { label: "快速聯繫標題", name: "quickTitle", widget: "string" }
+              - label: "標籤名稱"
+                name: "labels"
+                widget: "object"
+                fields:
+                  - { label: "Email", name: "email", widget: "string" }
+                  - { label: "GitHub", name: "github", widget: "string" }
+                  - { label: "LinkedIn", name: "linkedin", widget: "string" }
+                  - { label: "電話", name: "phone", widget: "string" }
+              - label: "表單"
+                name: "form"
+                widget: "object"
+                fields:
+                  - label: "欄位名稱"
+                    name: "labels"
+                    widget: "object"
+                    fields:
+                      - { label: "姓名", name: "name", widget: "string" }
+                      - { label: "Email", name: "email", widget: "string" }
+                      - { label: "內容", name: "message", widget: "string" }
+                  - label: "提示文字"
+                    name: "placeholders"
+                    widget: "object"
+                    fields:
+                      - { label: "姓名", name: "name", widget: "string" }
+                      - { label: "Email", name: "email", widget: "string" }
+                      - { label: "內容", name: "message", widget: "string" }
+                  - { label: "送出文字", name: "submit", widget: "string" }
+                  - { label: "備註", name: "note", widget: "text", required: false }
+                  - { label: "空值顯示", name: "empty", widget: "string" }
+                  - { label: "分隔符號", name: "separator", widget: "string" }
+                  - { label: "信件標題", name: "subject", widget: "string" }
+                  - { label: "訪客稱呼", name: "visitor", widget: "string" }
+          - label: "頁尾"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "版權文字", name: "copyright", widget: "string" }
+              - { label: "回到頂端", name: "backToTop", widget: "string" }
