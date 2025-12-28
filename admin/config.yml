@@ -4,7 +4,7 @@ backend:
   branch: main
   auth_type: pkce
   auth_scope: public_repo
-  app_id: "Ov23li8FExuUCWKcFSoM"
+  app_id: "0v23li8FExuUCWkCFSoM"
 
 site_url: "https://cookieyu2000.github.io/info_website"
 display_url: "https://cookieyu2000.github.io/info_website"
