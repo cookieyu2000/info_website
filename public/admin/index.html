@@ -10,7 +10,29 @@
     />
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
-    <script src="preview.js"></script>
+    <script>
+      (function () {
+        var isLocal =
+          location.hostname === "localhost" || location.hostname === "127.0.0.1";
+
+        if (!isLocal) {
+          document.body.innerHTML =
+            '<main style="font-family: \'DM Sans\', sans-serif; padding: 48px; max-width: 720px; margin: 0 auto;">' +
+            "<h1>後台僅供本機使用</h1>" +
+            "<p>請在本機執行網站並開啟 <strong>http://localhost:3000/admin/</strong> 進行內容編輯。</p>" +
+            "<p>修改完成後，請手動 commit 並 push，GitHub Actions 會自動部署到 GitHub Pages。</p>" +
+            "</main>";
+          return;
+        }
+
+        var cmsScript = document.createElement("script");
+        cmsScript.src = "https://unpkg.com/decap-cms@latest/dist/decap-cms.js";
+        document.body.appendChild(cmsScript);
+
+        var previewScript = document.createElement("script");
+        previewScript.src = "preview.js";
+        document.body.appendChild(previewScript);
+      })();
+    </script>
   </body>
 </html>
