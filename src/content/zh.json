@@ -1,6 +1,6 @@
 {
   "nav": {
-    "brandName": "Ping-Yen Yu",
+    "brandName": "Ping-Yen ",
     "brandTagline": "個人介紹網站",
     "languageLabel": "語言切換",
     "ariaLabel": "主要導覽",
@@ -34,7 +34,7 @@
     ]
   },
   "hero": {
-    "eyebrow": "AI-Software Engineer ",
+    "eyebrow": "AI-Software Engineer",
     "headline": {
       "prefix": "余秉諺",
       "name": "Ping-Yen",
