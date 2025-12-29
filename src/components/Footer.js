@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <>
-      <footer className="footer py-4">
+      <footer className="footer py-4" id="footer">
         <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
           <span>{footer.copyright}</span>
         </div>
