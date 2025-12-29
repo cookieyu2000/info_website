@@ -6,12 +6,31 @@
     "ariaLabel": "Primary navigation",
     "toggleLabel": "Toggle navigation",
     "items": [
-      { "label": "Home", "href": "#home" },
-      { "label": "Education", "href": "#education" },
-      { "label": "Experience", "href": "#experience" },
-      { "label": "About", "href": "#about" },
-      { "label": "Projects", "href": "#works" },
-      { "label": "Contact", "href": "#contact", "cta": true }
+      {
+        "label": "Home",
+        "href": "#home"
+      },
+      {
+        "label": "Education",
+        "href": "#education"
+      },
+      {
+        "label": "Experience",
+        "href": "#experience"
+      },
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Projects",
+        "href": "#works"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact",
+        "cta": true
+      }
     ]
   },
   "hero": {
@@ -27,9 +46,18 @@
       "secondary": "Work Together"
     },
     "stats": [
-      { "value": "2", "label": "Projects" },
-      { "value": "1", "label": "Partners" },
-      { "value": "1", "label": "Award Nominations" }
+      {
+        "value": "2",
+        "label": "Projects"
+      },
+      {
+        "value": "1",
+        "label": "Partners"
+      },
+      {
+        "value": "1",
+        "label": "Award Nominations"
+      }
     ],
     "card": {
       "status": "Open to work",
@@ -55,11 +83,17 @@
         "year": "2023 - 2025",
         "school": "National Chi Nan University・Department of Computer Science and Information Engineering",
         "logos": [
-          { "src": "/70_70.gif", "alt": "National Chi Nan University emblem" },
-          { "src": "/logo2.png", "alt": "National Chi Nan University logo" }
+          {
+            "src": "/70_70.gif",
+            "alt": "National Chi Nan University emblem"
+          },
+          {
+            "src": "/logo2.png",
+            "alt": "National Chi Nan University logo"
+          }
         ],
         "degree": "Master's",
-        "description": "Paper：A Study on the Application of Explainable Information Retrieval Methods for Determining the Pathogenicity of Genetic Variants。",
+        "description": "LAB：Artificial Intelligence Innovation & Application Labortory。\nPaper：A Study on the Application of Explainable Information Retrieval Methods for Determining the Pathogenicity of Genetic Variants。",
         "tags": [
           "LLM",
           "NLP",
@@ -67,14 +101,23 @@
           "Image Recognition",
           "Explainable AI",
           "Cross-domain Research"
-        ]
+        ],
+        "description_En": ""
       },
       {
         "year": "2019 - 2023",
         "school": "Shih Chien University・Department of Information Technology and Communications",
-        "logos": [{ "src": "/903635956.png", "alt": "Shih Chien University logo" }],
+        "logos": [
+          {
+            "src": "/903635956.png",
+            "alt": "Shih Chien University logo"
+          }
+        ],
         "degree": "Bachelor's",
-        "tags": ["Web Development", "Drone Implementation"]
+        "tags": [
+          "Web Development",
+          "Drone Implementation"
+        ]
       }
     ]
   },
@@ -88,7 +131,12 @@
         "company_En": "Institute for Information Industry (III)",
         "role_En": "Intern Engineer",
         "description_En": "Web Platform Development.",
-        "tags": ["React", "JavaScript", "MongoDB", "Node.js"]
+        "tags": [
+          "React",
+          "JavaScript",
+          "MongoDB",
+          "Node.js"
+        ]
       }
     ]
   },
@@ -137,7 +185,12 @@
         "type": "Competition",
         "title": "AICUP MOE AI competition and labeled data acquisition project",
         "description": "Models of Virtual Players in the Metaverse of Go - Silver Medal.",
-        "tags": ["DL", "AlphaGo", "CNN"],
+        "tags": [
+          "DL",
+          "AlphaGo",
+          "CNN",
+          "Python"
+        ],
         "image": "/aicup.JPG",
         "link": "https://www.aicup.tw/post/%E3%80%90%E5%BE%97%E7%8D%8E%E5%90%8D%E5%96%AE%E3%80%91ai-cup-2023-%E7%A7%8B%E5%AD%A3%E8%B3%BD-%E3%80%8C%E5%9C%8D%E6%A3%8B%E6%A3%8B%E5%8A%9B%E6%A8%A1%E4%BB%BF%E8%88%87%E6%A3%8B%E9%A2%A8%E8%BE%A8%E8%AD%98%E3%80%8D%E7%AB%B6%E8%B3%BD"
       },
@@ -146,7 +199,15 @@
         "type": "Master's Research",
         "title": "Genetic Variants Prediction Platform",
         "description": "Developed a gene variation pathogenicity prediction platform using Explainable AI and NLP.",
-        "tags": ["NLP", "Flask", "DL", "Transformer", "BERT"],
+        "tags": [
+          "NLP",
+          "Flask",
+          "DL",
+          "Transformer",
+          "BERT",
+          "Genetic Variants",
+          "Python"
+        ],
         "image": "/biobert.png",
         "link": "https://aiia.csie.ncnu.edu.tw:9999/"
       },
@@ -155,7 +216,14 @@
         "type": "Project",
         "title": "Personal Portfolio Website",
         "description": "Built a personal portfolio website using React.",
-        "tags": ["React", "JavaScript", "UI/UX Design"],
+        "tags": [
+          "React",
+          "JavaScript",
+          "UI/UX Design",
+          "GitHub Actions",
+          "Node.js",
+          "UI/UX Design"
+        ],
         "image": "/web.png",
         "link": "https://cookieyu2000.github.io/info_website/"
       }
