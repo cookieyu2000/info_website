@@ -6,6 +6,22 @@
   var autoPublishTimer = null;
   var previewFrame = null;
 
+  function mapLabelToSection(labelText) {
+    if (!labelText) return "";
+    var text = String(labelText).toLowerCase();
+
+    if (text.includes("導覽") || text.includes("nav") || text.includes("主視覺") || text.includes("hero")) {
+      return "home";
+    }
+    if (text.includes("學歷") || text.includes("education")) return "education";
+    if (text.includes("工作經驗") || text.includes("experience")) return "experience";
+    if (text.includes("個人介紹") || text.includes("about")) return "about";
+    if (text.includes("作品") || text.includes("works") || text.includes("project")) return "works";
+    if (text.includes("聯絡") || text.includes("contact")) return "contact";
+    if (text.includes("頁尾") || text.includes("footer")) return "footer";
+    return "";
+  }
+
   function mapFieldToSection(fieldKey) {
     if (!fieldKey) return "";
     var key = String(fieldKey).toLowerCase();
@@ -18,6 +34,19 @@
     if (key.includes("contact")) return "contact";
     if (key.includes("footer")) return "footer";
     return "";
+  }
+
+  function getLabelFromContainer(container) {
+    if (!container) return "";
+    var label =
+      container.querySelector("label") ||
+      container.querySelector("legend") ||
+      container.querySelector("summary") ||
+      container.querySelector("h2, h3, h4") ||
+      container.querySelector("[class*='FieldLabel']") ||
+      container.querySelector("[class*='field-label']");
+
+    return label ? label.textContent.trim() : "";
   }
 
   function findFieldKey(target) {
@@ -42,6 +71,40 @@
     );
   }
 
+  function findFieldContext(target) {
+    if (!target) return { key: "", label: "" };
+
+    var key = findFieldKey(target);
+    if (key) return { key: key, label: "" };
+
+    var labeledBy = target.getAttribute("aria-labelledby");
+    if (labeledBy) {
+      var labelNode = document.getElementById(labeledBy);
+      if (labelNode && labelNode.textContent) {
+        return { key: "", label: labelNode.textContent.trim() };
+      }
+    }
+
+    var container =
+      target.closest("[class*='Field']") ||
+      target.closest("[class*='field']") ||
+      target.closest("fieldset") ||
+      target.closest("details");
+
+    if (container) {
+      var labelText = getLabelFromContainer(container);
+      if (labelText) return { key: "", label: labelText };
+    }
+
+    var group = target.closest("[role='group']");
+    if (group) {
+      var groupLabel = getLabelFromContainer(group);
+      if (groupLabel) return { key: "", label: groupLabel };
+    }
+
+    return { key: "", label: "" };
+  }
+
   function sendScrollToPreview(section) {
     if (!section || !previewFrame || !previewFrame.contentWindow) return;
     previewFrame.contentWindow.postMessage(
@@ -56,8 +119,9 @@
       var target = event.target;
       if (!target || !target.matches("input, textarea, select")) return;
 
-      var fieldKey = findFieldKey(target);
-      var section = mapFieldToSection(fieldKey);
+      var context = findFieldContext(target);
+      var section =
+        mapFieldToSection(context.key) || mapLabelToSection(context.label);
       sendScrollToPreview(section);
     },
     true
