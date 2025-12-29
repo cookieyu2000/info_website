@@ -4,6 +4,64 @@
     window.location.hostname === "localhost" ||
     window.location.hostname === "127.0.0.1";
   var autoPublishTimer = null;
+  var previewFrame = null;
+
+  function mapFieldToSection(fieldKey) {
+    if (!fieldKey) return "";
+    var key = String(fieldKey).toLowerCase();
+
+    if (key.includes("nav") || key.includes("hero")) return "home";
+    if (key.includes("education")) return "education";
+    if (key.includes("experience")) return "experience";
+    if (key.includes("about")) return "about";
+    if (key.includes("works")) return "works";
+    if (key.includes("contact")) return "contact";
+    if (key.includes("footer")) return "footer";
+    return "";
+  }
+
+  function findFieldKey(target) {
+    if (!target) return "";
+    var direct =
+      target.getAttribute("name") ||
+      target.getAttribute("data-path") ||
+      target.getAttribute("data-name") ||
+      target.getAttribute("data-field") ||
+      target.getAttribute("aria-label");
+
+    if (direct) return direct;
+
+    var parent = target.closest("[data-path],[data-name],[data-field]");
+    if (!parent) return "";
+
+    return (
+      parent.getAttribute("data-path") ||
+      parent.getAttribute("data-name") ||
+      parent.getAttribute("data-field") ||
+      ""
+    );
+  }
+
+  function sendScrollToPreview(section) {
+    if (!section || !previewFrame || !previewFrame.contentWindow) return;
+    previewFrame.contentWindow.postMessage(
+      { type: "cms-scroll", section: section },
+      window.location.origin
+    );
+  }
+
+  document.addEventListener(
+    "focusin",
+    function (event) {
+      var target = event.target;
+      if (!target || !target.matches("input, textarea, select")) return;
+
+      var fieldKey = findFieldKey(target);
+      var section = mapFieldToSection(fieldKey);
+      sendScrollToPreview(section);
+    },
+    true
+  );
 
   function scheduleAutoPublish(entry) {
     if (!isLocalHost) return;
@@ -43,6 +101,7 @@
   var PreviewFrame = createClass({
     setFrameRef: function (element) {
       this.previewFrame = element;
+      previewFrame = element;
     },
     componentDidMount: function () {
       this.postPreviewData();
