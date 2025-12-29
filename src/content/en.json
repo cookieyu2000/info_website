@@ -37,8 +37,8 @@
     "eyebrow": "AI Software Engineer",
     "headline": {
       "prefix": "Hi, I'm",
-      "name": "Ping-Yen Yu",
-      "connector": ","
+      "name": "Ping-Yen ",
+      "connector": "Yu"
     },
     "lead": "Background in machine learning and deep learning, with strengths in LLMs, NLP, and explainable AI.",
     "ctas": {
