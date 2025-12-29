@@ -176,7 +176,8 @@
         "tags": [
           "DL",
           "AlphaGo",
-          "CNN"
+          "CNN",
+          "Python"
         ],
         "image": "/aicup.JPG",
         "link": "https://www.aicup.tw/post/%E3%80%90%E5%BE%97%E7%8D%8E%E5%90%8D%E5%96%AE%E3%80%91ai-cup-2023-%E7%A7%8B%E5%AD%A3%E8%B3%BD-%E3%80%8C%E5%9C%8D%E6%A3%8B%E6%A3%8B%E5%8A%9B%E6%A8%A1%E4%BB%BF%E8%88%87%E6%A3%8B%E9%A2%A8%E8%BE%A8%E8%AD%98%E3%80%8D%E7%AB%B6%E8%B3%BD"
@@ -191,7 +192,9 @@
           "Flask",
           "DL",
           "Transformer",
-          "BERT"
+          "BERT",
+          "Genetic Variants",
+          "Python"
         ],
         "image": "/biobert.png",
         "link": "https://aiia.csie.ncnu.edu.tw:9999/"
