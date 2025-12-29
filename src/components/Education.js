@@ -5,6 +5,15 @@ function Education() {
   const { content, language } = useLanguage();
   const { education } = content;
   const isEnglish = language === "en";
+  const renderMultiline = (text) =>
+    String(text)
+      .split("\n")
+      .map((line, index, lines) => (
+        <span key={`${index}-${line}`}>
+          {line}
+          {index < lines.length - 1 && <br />}
+        </span>
+      ));
   const fallbackItems = allContent.zh?.education?.items || [];
   const educationItems = education.items.map((item, index) => {
     const fallbackItem = fallbackItems[index];
@@ -82,11 +91,13 @@ function Education() {
                   {isEnglish
                     ? (item.description_En || item.description) && (
                         <p className="text-muted">
-                          {item.description_En || item.description}
+                          {renderMultiline(item.description_En || item.description)}
                         </p>
                       )
                     : item.description && (
-                        <p className="text-muted">{item.description}</p>
+                        <p className="text-muted">
+                          {renderMultiline(item.description)}
+                        </p>
                       )}
                   <div className="d-flex flex-wrap gap-2">
                     {item.tags.map((tag) => (
