@@ -200,10 +200,13 @@
         "year": "2025",
         "type": "作品",
         "title": "個人形象網站",
-        "description": "利用 React 建立個人形象網站。",
+        "description": "我用 React 做一個個人形象網站，採前後端分離：前台負責展示與互動、後台提供內容管理介面，不用改程式就能更新履歷、作品與文章。",
         "tags": [
           "React",
           "JavaScript",
+          "GitHub Pages",
+          "GitHub Actions",
+          "Node.js",
           "UI/UX Design"
         ],
         "image": "/web.png",
