@@ -145,7 +145,7 @@
     "title": "Skill Overview.",
     "introTitle": "Bio",
     "introParagraphs": [
-      "I am an **application-driven AI Engineer** with a strong background in machine learning and deep learning, specializing in **LLMs, NLP, and explainable AI.**\n\nI have developed **medical and biomedical AI projects,** including biomedical literature analysis, medical information retrieval, and image recognition tasks, and have experience collaborating across interdisciplinary teams. I am familiar with the full implementation pipeline, from **data preprocessing and model training (fine-tuning) to inference deployment.**\n\nI have completed my master’s degree and military service, and I am currently seeking a **long-term full-time AI Engineer position.**"
+      "I am an **application-oriented AI engineer** with a background in machine learning and deep learning. My expertise lies in **LLMs, NLP, and explainable AI**, and I am proficient in the entire workflow from data processing, model training (fine-tuning), evaluation, to inference deployment.\n\nPreviously engaged in **medical and biomedical AI projects**, including tasks such as **biomedical literature analysis, medical information retrieval, and image recognition**. Capable of collaborating with members from diverse backgrounds across interdisciplinary contexts to clarify requirements.\n\nI also possess the ability to systematically present research outcomes: I developed a **gene variant prediction platform** integrating PubMed search, pathogenicity support assessment, and evidence sentence highlighting to help users quickly locate critical information.\n\nHaving **completed my master's degree and military service**, I am now seeking a long-term **full-time AI Engineer/Software Engineer** position. I look forward to continuing to build my impact within a team that equally values product development and R&D."
     ],
     "highlights": [
       {
@@ -215,7 +215,7 @@
         "year": "2025",
         "type": "Project",
         "title": "Personal Portfolio Website",
-        "description": "Built a personal portfolio website using React.",
+        "description": "Research and evaluate cutting‑edge AI/LLM technologies; design and execute POCs to validate feasibility prior to production integration.",
         "tags": [
           "React",
           "JavaScript",
