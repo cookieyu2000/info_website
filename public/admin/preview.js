@@ -5,6 +5,8 @@
     window.location.hostname === "127.0.0.1";
   var autoPublishTimer = null;
   var previewFrame = null;
+  var lastSection = "";
+  var scrollTicking = false;
 
   function mapLabelToSection(labelText) {
     if (!labelText) return "";
@@ -107,6 +109,8 @@
 
   function sendScrollToPreview(section) {
     if (!section || !previewFrame || !previewFrame.contentWindow) return;
+    if (section === lastSection) return;
+    lastSection = section;
     previewFrame.contentWindow.postMessage(
       { type: "cms-scroll", section: section },
       window.location.origin
@@ -126,6 +130,58 @@
     },
     true
   );
+
+  function getCandidateLabels() {
+    return Array.prototype.slice.call(
+      document.querySelectorAll(
+        "label, legend, summary, h2, h3, h4, [class*='FieldLabel'], [class*='field-label']"
+      )
+    );
+  }
+
+  function pickActiveLabel() {
+    var candidates = getCandidateLabels();
+    if (!candidates.length) return "";
+
+    var leftLimit = window.innerWidth * 0.48;
+    var bestAbove = null;
+    var bestBelow = null;
+
+    candidates.forEach(function (node) {
+      var rect = node.getBoundingClientRect();
+      if (rect.right <= 0 || rect.bottom <= 0) return;
+      if (rect.left > leftLimit) return;
+
+      if (rect.top >= 0) {
+        if (!bestBelow || rect.top < bestBelow.top) {
+          bestBelow = { node: node, top: rect.top };
+        }
+      } else {
+        if (!bestAbove || rect.top > bestAbove.top) {
+          bestAbove = { node: node, top: rect.top };
+        }
+      }
+    });
+
+    var chosen = (bestBelow || bestAbove) && (bestBelow || bestAbove).node;
+    return chosen ? chosen.textContent.trim() : "";
+  }
+
+  function handleScrollSync() {
+    if (scrollTicking) return;
+    scrollTicking = true;
+
+    window.requestAnimationFrame(function () {
+      scrollTicking = false;
+      var labelText = pickActiveLabel();
+      var section = mapLabelToSection(labelText);
+      if (section) {
+        sendScrollToPreview(section);
+      }
+    });
+  }
+
+  document.addEventListener("scroll", handleScrollSync, true);
 
   function scheduleAutoPublish(entry) {
     if (!isLocalHost) return;

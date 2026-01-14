@@ -15,6 +15,23 @@ npm start
 
 Open http://localhost:3000
 
+## Local CMS (Decap)
+
+Run these three commands in separate terminals:
+
+```bash
+# A
+npm start
+
+# B
+npx decap-server
+
+# C
+npm run auto-publish
+```
+
+Open http://localhost:3000/admin/
+
 ## Build
 
 ```bash
@@ -29,5 +46,5 @@ npm run deploy
 
 ## Project Notes
 
-- Content files: `src/content/zh.js`, `src/content/en.js`
+- Content files: `src/content/zh.json`, `src/content/en.json`
 - Deploy config: `package.json` `homepage`, `predeploy`, `deploy`
