@@ -127,16 +127,24 @@
     "description": "",
     "items": [
       {
+        "period": "2025.02 - Now",
+        "company": "AmTRAN",
+        "role_En": "",
+        "tags": [],
+        "role": "AI Engineer"
+      },
+      {
         "period": "2022.07.01 - 2023.03.31",
         "company_En": "Institute for Information Industry (III)",
-        "role_En": "Intern Engineer",
+        "role_En": "",
         "description_En": "Web Platform Development.",
         "tags": [
           "React",
           "JavaScript",
           "MongoDB",
           "Node.js"
-        ]
+        ],
+        "role": "Intern Engineer"
       }
     ]
   },
