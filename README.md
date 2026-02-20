@@ -21,8 +21,7 @@ Run these three commands in separate terminals:
 
 ```bash
 # A
-npm start
-
+ç
 # B
 npx decap-server
 

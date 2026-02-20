@@ -116,8 +116,13 @@
       {
         "period": "2025.02 - 至今",
         "company": "瑞軒科技股份有限公司",
-        "role": "AI 工程師",
-        "tags": []
+        "role": "AI Engineer",
+        "tags": [
+          "Multimodal Model Fine-Tuning",
+          "AI Robot",
+          "Image Processing"
+        ],
+        "description": "多模態模型微調、AI 機器人、影像處理"
       },
       {
         "period": "2022.07.01 - 2023.03.31",
