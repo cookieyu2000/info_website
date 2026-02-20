@@ -130,8 +130,14 @@
         "period": "2025.02 - Now",
         "company": "AmTRAN",
         "role_En": "",
-        "tags": [],
-        "role": "AI Engineer"
+        "tags": [
+          "GR00T",
+          "LLM",
+          "Image processing"
+        ],
+        "role": "AI Engineer",
+        "description": "",
+        "description_En": "Multimodal model fine-tuning, AI robots, image processing"
       },
       {
         "period": "2022.07.01 - 2023.03.31",
