@@ -46,7 +46,7 @@
       "secondary": "一起合作"
     },
     "card": {
-      "status": "求職中",
+      "status": "在職中",
       "location": "台北、新北、新竹",
       "name": "余秉諺",
       "title": "AI-Software Engineer",
@@ -114,7 +114,13 @@
     "title": "職涯經歷。",
     "items": [
       {
-        "period": "2025.02 - 至今",
+        "period": "2026.09 - 至今",
+        "company": "緯穎科技服務股份有限公司",
+        "role": "AI Engineer",
+        "tags": []
+      },
+      {
+        "period": "2026.02 - 2026.08",
         "company": "瑞軒科技股份有限公司",
         "role": "AI Engineer",
         "tags": [
