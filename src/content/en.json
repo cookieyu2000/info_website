@@ -60,7 +60,7 @@
       }
     ],
     "card": {
-      "status": "Open to work",
+      "status": "Currently employed",
       "location": "Taipei",
       "name": "Ping-Yen Yu",
       "title": "AI-Software Engineer",
@@ -127,7 +127,11 @@
     "description": "",
     "items": [
       {
-        "period": "2025.02 - Now",
+        "period": "2026.09 - NOW",
+        "company": "Wiwynn"
+      },
+      {
+        "period": "2026.02 - 2026.08",
         "company": "AmTRAN",
         "role_En": "",
         "tags": [
